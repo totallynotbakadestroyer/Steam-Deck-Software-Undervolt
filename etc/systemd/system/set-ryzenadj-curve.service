@@ -1,0 +1,10 @@
+[Unit]
+Description=RyzenAdj Per Core Curve Optimizer
+After=suspend.target hibernate.target hybrid-sleep.target suspend-then-hibernate.target ac.target battery.target
+
+[Service]
+ExecStart=/home/deck/.local/bin/set-ryzenadj-curve.sh
+Type=oneshot
+
+[Install]
+WantedBy=multi-user.target suspend.target hibernate.target hybrid-sleep.target suspend-then-hibernate.target ac.target battery.target
