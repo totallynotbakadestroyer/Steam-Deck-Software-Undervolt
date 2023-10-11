@@ -20,11 +20,13 @@ fromPath="./home/deck/.local/bin/"
 toPath="/home/deck/.local/bin/"
 mkdir -p $toPath
 cp_file $fromPath $toPath "allowadj.txt"
+cp_file $fromPath $toPath "curve.sh"
 cp_file $fromPath $toPath "experimental.sh"
 cp_file $fromPath $toPath "experimentaladj.txt"
 cp_file $fromPath $toPath "off.sh"
 cp_file $fromPath $toPath "on.sh"
 cp_file $fromPath $toPath "ryzenadj"
+cp_file $fromPath $toPath "set-ryzenadj-curve.sh"
 cp_file $fromPath $toPath "set-ryzenadj-tweaks.sh"
 cp_file $fromPath $toPath "statusadj.txt"
 
@@ -32,6 +34,8 @@ fromPath="./etc/systemd/system/"
 toPath="/etc/systemd/system/"
 cp_file $fromPath $toPath "ac.target"
 cp_file $fromPath $toPath "battery.target"
+cp_file $fromPath $toPath "set-ryzenadj-curve.path"
+cp_file $fromPath $toPath "set-ryzenadj-curve.service"
 cp_file $fromPath $toPath "set-ryzenadj-tweaks.path"
 cp_file $fromPath $toPath "set-ryzenadj-tweaks.service"
 
@@ -53,11 +57,27 @@ bash $toPath"off.sh"
 echo "Enable new powertarget rules..."
 udevadm control --reload-rules
 
-echo "Enable path listener..."
-systemctl enable --now set-ryzenadj-tweaks.path
+while true; do
+    read -r -p "Select undervolt method: (all/curve)" ANSWER
+    case $ANSWER in
+        a|all)
+            echo "Enable path listener..."
+            systemctl enable --now set-ryzenadj-tweaks.path
 
-echo "Enabling set-ryzenadj-tweaks service..."
-systemctl enable set-ryzenadj-tweaks.service
+            echo "Enabling set-ryzenadj-tweaks service..."
+            systemctl enable set-ryzenadj-tweaks.service
+            break
+            ;;
+        c|curve)
+            echo "Enable path listener..."
+            systemctl enable --now set-ryzenadj-curve.path
+
+            echo "Enabling set-ryzenadj-curve service..."
+            systemctl enable set-ryzenadj-curve.service
+            break
+            ;;
+    esac
+done
 
 echo "Installation done."
 echo ""
