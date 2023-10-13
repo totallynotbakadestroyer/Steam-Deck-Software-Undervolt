@@ -31,7 +31,7 @@ Undervolt amount can be changed by editing `/home/deck/.local/bin/set-ryzenadj-c
 
 By default a `-5`/`-5`/`-5`/`-5` is applied *(via `-set-coper`)*, in the 'undervolt-on' section 
 
-`-15`/`-15`/`-15`/`-15 per core curve optimization is applied in the `experimental` section.
+`-15`/`-15`/`-15`/`-15` per core curve optimization is applied in the `experimental` section.
 
 ## Activation
 
