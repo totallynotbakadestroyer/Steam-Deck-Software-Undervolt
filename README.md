@@ -25,7 +25,7 @@ A much more ambitious `-15` curve optimization is applied in the `experimental` 
 #### Per core method
 The installation is identical to the All core method, but when selecting the undervolt method you need to enter `curve`.
 
-It will install a new service `set-ryzenadj-tweaks.service` and create some additional service activation rules.
+It will install a new service `set-ryzenadj-curve.service` and create some additional service activation rules.
 
 Undervolt amount can be changed by editing `/home/deck/.local/bin/set-ryzenadj-curve.sh`
 
