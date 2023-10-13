@@ -8,7 +8,10 @@ A precompiled version of RyzenAdj is provided for your convenience, built on my 
 As with any undervolt exercise caution, while this project greatly reduces the risk of bricking your deck, it does not in any way guarantee you won't damage your hardware. Use at your own risk.
 
 ## Installation
+#### All core method
 Clone this repository, with the repository root folder as current folder make the script `install.sh` executeable with `chmod +x install.sh`and run it with root privileges: `sudo ./install.sh`
+
+When "Select undervolt method: (all/curve)" pops up during installation, enter "all".
 
 It will install a new service `set-ryzenadj-tweaks.service`, create some additional service activation rules, and copy a bunch of files to the `/home/deck/.local/bin` folder.
 
@@ -18,6 +21,17 @@ Undervolt amount can be changed by editing `/home/deck/.local/bin/set-ryzenadj-t
 By default a `-5` [curve optimization](https://www.amd.com/system/files/documents/faq-curve-optimizer.pdf) is applied *(via `-set-coall`)*, in the 'undervolt-on' section which should be stable on most hardware.
 
 A much more ambitious `-15` curve optimization is applied in the `experimental` section. This setting might be stable but it might also cause a crash/hang if applied.
+
+#### Per core method
+The installation is identical to the All core method, but when selecting the undervolt method you need to enter "curve".
+
+It will install a new service `set-ryzenadj-tweaks.service` and create some additional service activation rules.
+
+Undervolt amount can be changed by editing `/home/deck/.local/bin/set-ryzenadj-curve.sh`
+
+By default a `-5`/`-5`/`-5`/`-5` is applied *(via `-set-coper`)*, in the 'undervolt-on' section 
+
+`-15` per core curve optimization is applied in the `experimental` section.
 
 ## Activation
 
