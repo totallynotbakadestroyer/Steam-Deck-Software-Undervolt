@@ -61,7 +61,7 @@ echo "Enable new powertarget rules..."
 udevadm control --reload-rules
 
 while true; do
-    read -r -p "Select undervolt method: (all/curve): " ANSWER
+    read -r -p "Select undervolt method: (all/coper): " ANSWER
     case $ANSWER in
         a|all)
             echo "Enable path listener..."
@@ -71,7 +71,7 @@ while true; do
             systemctl enable set-ryzenadj-tweaks.service
             break
             ;;
-        c|curve)
+        c|coper)
             echo "Enable path listener..."
             systemctl enable --now set-ryzenadj-curve.path
 
