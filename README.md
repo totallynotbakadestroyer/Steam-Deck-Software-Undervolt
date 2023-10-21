@@ -56,7 +56,7 @@ As with any undervolt exercise caution, while this project greatly reduces the r
 #### All core method
 Clone this repository, with the repository root folder as current folder make the script `install.sh` executeable with `chmod +x install.sh`and run it with root privileges: `sudo ./install.sh`
 
-When `Select undervolt method: (all/curve)` pops up during installation, enter `all`.
+When `Select undervolt method: (all/coper)` pops up during installation, enter `all`.
 
 It will install a new service `set-ryzenadj-tweaks.service`, create some additional service activation rules, and copy a bunch of files to the `/home/deck/.local/bin` folder.
 
@@ -68,7 +68,7 @@ By default a `-5` [curve optimization](https://www.amd.com/system/files/document
 A much more ambitious `-15` curve optimization is applied in the `experimental` section. This setting might be stable but it might also cause a crash/hang if applied.
 
 #### Per core method
-The installation is identical to the All core method, but when selecting the undervolt method you need to enter `curve`.
+The installation is identical to the All core method, but when selecting the undervolt method you need to enter `coper`.
 
 It will install a new service `set-ryzenadj-curve.service` and create some additional service activation rules.
 
