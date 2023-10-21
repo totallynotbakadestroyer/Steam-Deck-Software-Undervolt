@@ -92,7 +92,7 @@ fi
 
 while [[ $# -gt 0 ]]; do
     case $1 in
-        -[0-4]|--core[0-4])
+        -[0-3]|--core[0-3])
             CORE_NUMBER=$(echo $1 | tr -d -c 0-9)
             validate $1 $2
             declare CORE_$CORE_NUMBER="$2"

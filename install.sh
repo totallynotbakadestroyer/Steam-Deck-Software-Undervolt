@@ -48,8 +48,11 @@ toPath="/home/deck/.local/bin/"
 chmod 666 $toPath"allowadj.txt"
 chmod 666 $toPath"experimentaladj.txt"
 chmod 755 $toPath"experimental.sh"
-chmod 755 $toPath"on.sh"
 chmod 755 $toPath"off.sh"
+chmod 755 $toPath"on.sh"
+chmod 755 $toPath"ryzenadj"
+chmod 755 $toPath"set-ryzenadj-curve.sh"
+chmod 755 $toPath"set-ryzenadj-tweaks.sh"
 
 echo "Ensuring undervolt is off..."
 bash $toPath"off.sh"
@@ -58,7 +61,7 @@ echo "Enable new powertarget rules..."
 udevadm control --reload-rules
 
 while true; do
-    read -r -p "Select undervolt method: (all/curve)" ANSWER
+    read -r -p "Select undervolt method: (all/curve): " ANSWER
     case $ANSWER in
         a|all)
             echo "Enable path listener..."
