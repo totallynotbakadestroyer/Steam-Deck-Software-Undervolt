@@ -60,6 +60,8 @@ bash $toPath"off.sh"
 echo "Enable new powertarget rules..."
 udevadm control --reload-rules
 
+systemctl daemon-reload
+
 while true; do
     read -r -p "Select undervolt method: (all/coper): " ANSWER
     case $ANSWER in
