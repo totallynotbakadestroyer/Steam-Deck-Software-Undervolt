@@ -3,6 +3,7 @@ Description=RyzenAdj Per Core Curve Optimizer
 After=suspend.target hibernate.target hybrid-sleep.target suspend-then-hibernate.target ac.target battery.target
 
 [Service]
+ExecStartPre=/bin/sh -c "echo '' > /home/deck/.local/bin/statusadj.txt"
 ExecStart=/home/deck/.local/bin/set-ryzenadj-curve.sh
 Type=oneshot
 
