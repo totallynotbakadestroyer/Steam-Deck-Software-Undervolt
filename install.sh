@@ -29,6 +29,8 @@ cp_file $fromPath $toPath "ryzenadj"
 cp_file $fromPath $toPath "set-ryzenadj-curve.sh"
 cp_file $fromPath $toPath "set-ryzenadj-tweaks.sh"
 cp_file $fromPath $toPath "statusadj.txt"
+cp_file $fromPath $toPath "enable-coall.sh"
+cp_file $fromPath $toPath "enable-coper.sh"
 
 fromPath="./etc/systemd/system/"
 toPath="/etc/systemd/system/"
