@@ -58,6 +58,9 @@ chmod 755 $toPath"set-ryzenadj-tweaks.sh"
 chmod 775 $toPath"enable-coper.sh"
 chmod 775 $toPath"enable-coall.sh"
 
+curuser=$(logname)
+chown -R $curuser:$curuser $toPath
+
 echo "Ensuring undervolt is off..."
 bash $toPath"off.sh"
 
