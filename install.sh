@@ -55,6 +55,8 @@ chmod 755 $toPath"on.sh"
 chmod 755 $toPath"ryzenadj"
 chmod 755 $toPath"set-ryzenadj-curve.sh"
 chmod 755 $toPath"set-ryzenadj-tweaks.sh"
+chmod 775 $toPath"enable-coper.sh"
+chmod 775 $toPath"enable-coall.sh"
 
 echo "Ensuring undervolt is off..."
 bash $toPath"off.sh"
