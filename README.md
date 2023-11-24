@@ -42,7 +42,7 @@
 Узнать статус андервольта можно в файле `/home/deck/.local/bin/statusadj.txt`
 
 ## Получение значения для coall
-Используйте данный калькулятор https://www.calculator.net/hex-calculator.html?number1=100000&c2op=-&number2=19&calctype=op&x=Calculate Впишите нужное вам значение в `Convert Decimal Value to Hexadecimal Value`, а то что выдаст в `Hexadecimal Calculation—Add, Subtract, Multiply, or Divide`(должно быть выставлено 1000 -
+Используйте данный калькулятор https://www.calculator.net/hex-calculator.html?number1=100000&c2op=-&number2=19&calctype=op&x=Calculate Впишите нужное вам значение в `Convert Decimal Value to Hexadecimal Value`, а то что выдаст в `Hexadecimal Calculation—Add, Subtract, Multiply, or Divide`(должно быть выставлено 1000 -)
 
 ## EN SECTION
 
