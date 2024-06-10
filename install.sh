@@ -69,27 +69,11 @@ udevadm control --reload-rules
 
 systemctl daemon-reload
 
-while true; do
-    read -r -p "Select undervolt method: (all/coper): " ANSWER
-    case $ANSWER in
-        a|all)
-            echo "Enable path listener..."
-            systemctl enable --now set-ryzenadj-tweaks.path
+echo "Enable path listener..."
+systemctl enable --now set-ryzenadj-curve.path
 
-            echo "Enabling set-ryzenadj-tweaks service..."
-            systemctl enable set-ryzenadj-tweaks.service
-            break
-            ;;
-        c|coper)
-            echo "Enable path listener..."
-            systemctl enable --now set-ryzenadj-curve.path
-
-            echo "Enabling set-ryzenadj-curve service..."
-            systemctl enable set-ryzenadj-curve.service
-            break
-            ;;
-    esac
-done
+echo "Enabling set-ryzenadj-curve service..."
+systemctl enable set-ryzenadj-curve.service
 
 echo "Installation done."
 echo ""
